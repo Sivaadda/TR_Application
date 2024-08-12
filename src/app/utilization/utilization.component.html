@@ -1,0 +1,54 @@
+<div class="container p-5">
+
+    <input type="file" (change)="onFileSelected($event)" class="form-control mb-2">
+    <button (click)="onUpload()" class="btn btn-primary">Upload</button>
+
+    <table class="table table-striped ">
+      <thead>
+        <tr>
+          <th scope="col" class="table-heading">AssociateId</th>
+          <th scope="col" class="table-heading">AssociateName</th>
+          <th scope="col" class="table-heading">GradeName</th>
+          <th scope="col" class="table-heading">Utilization</th>
+          <th scope="col" class="table-heading">IsOnsite</th>
+          <th scope="col" class="table-heading">ProjectId</th>
+          <th scope="col" class="table-heading">ProjectName</th>
+          <th scope="col" class="table-heading">CustomerId</th>
+          <th scope="col" class="table-heading">Pratice</th>
+          <th scope="col" class="table-heading">BilledFTE</th>
+          <th scope="col" class="table-heading">TotalFTE</th>
+          <th scope="col" class="table-heading">UnbilledFTE</th>
+          <th scope="col" class="table-heading">ParentCustomer</th>
+          <th scope="col" class="table-heading">AllocationPercentage</th>
+          <th scope="col" class="table-heading">GradeName</th>
+          <th scope="col" class="table-heading">AllocationPercentage</th>
+          <th scope="col" class="table-heading">AllocationStaringDate</th>
+          <th scope="col" class="table-heading">AllocationEndDate</th>
+
+          
+        </tr>
+      </thead>
+      <tbody>
+        <tr *ngFor="let element of combinedArray">
+          <td>{{element.associateId}}</td>
+          <td>{{element.associateName}}</td>
+          <td>{{element.gradeName}}</td>
+          <td>{{element.uitilization}}</td>
+          <td>{{element.isOnsite}}</td>
+          <td>{{element.projectId}}</td>
+          <td>{{element.projectName}}</td>
+          <td>{{element.customerId}}</td>
+          <td>{{element.pratice}}</td>
+          <td>{{element.billedFTE}}</td>
+          <td>{{element.totalFTE}}</td>
+          <td>{{element.unbilledFTE}}</td>
+          <td>{{element.parentCustomer}}</td>
+          <td>{{element.allocationPercentage}}</td>
+          <td>{{element.allocationStaringDate}}</td>
+          <td>{{element.allocationEndDate}}</td>
+        
+        </tr>
+        <tr *ngFor="let element of billingData"></tr>
+      </tbody>
+    </table>
+</div>
