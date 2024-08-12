@@ -25,4 +25,20 @@ return this.http.post(`${this.apiUrl}/upload`, formData);
   getProjectData(): Observable<any[]>{
     return this.http.get<any[]>(`${this.apiUrl}/Billing`);
   }
+
+  getOnsiteFTE(): Observable<any[]>{
+    return this.http.get<any[]>(`${this.apiUrl}/Billing/OnsiteTotalFTE`);
+  }
+  getOffshoreFTE(): Observable<any[]>{
+    return this.http.get<any[]>(`${this.apiUrl}/Billing/OffShoreTotalFTE`);
+  }
+  getOnsiteCount(): Observable<any[]>{
+    return this.http.get<any[]>(`${this.apiUrl}/Billing/OnsiteTotalCount`);
+  }
+  getOffshoreCount(): Observable<any[]>{
+    return this.http.get<any[]>(`${this.apiUrl}/Billing/OffShoreTotalCount`);
+  }
+  getTotalCount(): Observable<any[]>{
+    return this.http.get<any[]>(`${this.apiUrl}/Billing/TotalCount`);
+  }
 }
