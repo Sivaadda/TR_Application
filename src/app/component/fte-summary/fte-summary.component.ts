@@ -12,6 +12,7 @@ export class FteSummaryComponent {
   onSiteCount:any[];
   offShoreCount:any[];
   totalCount:any[];
+  
 constructor(private utilization:UtilizationService){
 
 }
@@ -20,6 +21,7 @@ getOnsiteTotalFTE() {
 this.onSiteFTE=data;
 
 console.log(this.onSiteFTE);
+
   })
 }
 getOffshoreTotalFTE() {
@@ -45,6 +47,10 @@ getTotalCount() {
 this.totalCount=data;
 console.log(this.totalCount);
   })
+}
+
+showInsite(index:number):number{
+return 3;
 }
 ngOnInit(){
   this.getOnsiteTotalFTE();

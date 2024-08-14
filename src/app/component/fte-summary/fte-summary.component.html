@@ -1,84 +1,40 @@
-<div class="ggg"><div class="bg-primary w-50"><table class="table table-bordered">
-    <thead>
+<div class="fte-container">
+    <div class="w-50 onsite-container ">
+    <table class="table table-bordered">
+    <thead class="table-dark text-white">
         <tr>
-          <th scope="col">IsOnsite</th>
+         <th>IsOnsite</th>
           <th scope="col">Utilization</th>
           <th scope="col">TotalFTE</th>
-          
-          
         </tr>
       </thead>
       <tbody>
-        <tr>
-            <th rowspan="3">Onsite</th>
-            <td>
-                <tr>eee</tr>
-            </td>
-            <td>
-                <tr>eee</tr>
-            </td>
-           </tr>
-           <tr>
-           
-            <td>
-                <tr>eee</tr>
-            </td>
-            <td>
-                <tr>eee</tr>
-            </td>
-           </tr>
-           <tr>
-            
-            <td>
-                <tr>eee</tr>
-            </td>
-            <td>
-                <tr>eee</tr>
-            </td>
-           </tr>
-           <tr>
-            <th rowspan="3">OffShore</th>
-            <td>
-                <tr>eee</tr>
-            </td>
-            <td>
-                <tr>eee</tr>
-            </td>
-           </tr>
-           <tr>
-           
-            <td>
-                <tr>eee</tr>
-            </td>
-            <td>
-                <tr>eee</tr>
-            </td>
-           </tr>
-           <tr>
-            
-            <td>
-                <tr>eee</tr>
-            </td>
-            <td>
-                <tr>eee</tr>
-            </td>
-           </tr>
-      </tbody>
-  
+        <tr class="table-warning" *ngFor="let utilization of (onSiteFTE | keyvalue);  let i = index">
+           <td  *ngIf="i === 0" rowspan="3">Onsite</td>
+                <td>{{utilization.key}}</td>
+                <td>{{utilization.value}}</td>
+        </tr>
+        <tr  class="table-secondary" *ngFor="let utilization of (offShoreFTE | keyvalue); let i = index" >
+            <td *ngIf="i === 0" rowspan="9" >OffShore</td>
+            <td>{{utilization.key}}</td>
+            <td>{{utilization.value}}</td>
+        </tr>   
+        </tbody>
+ 
    </table>
 </div>
-
-<div class="w-50 bg-primary">
+ 
+<div class="total-container ">
    <table class="table table-bordered">
     <tbody>
-        <tr><th>Onsite</th>
-        <td>500</td></tr>
-        <tr><th>OffShore</th>
-            <td>500</td></tr>
-            <tr><th>Total</th>
-                <td>500</td></tr>
+        <tr class="table-secondary"><th>Onsite</th>
+        <td >{{onSiteCount}}</td></tr>
+        <tr class="table-secondary"><th>OffShore</th>
+            <td>{{offShoreCount}}</td></tr>
+            <tr class="table-primary"><th>Total</th>
+                <td>{{totalCount}}</td></tr>
     </tbody>
-
+ 
     <tbody></tbody>
    </table>
 </div>

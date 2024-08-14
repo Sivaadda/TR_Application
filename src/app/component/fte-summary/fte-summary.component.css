@@ -2,6 +2,16 @@ table{
     text-align: center;
     
 }
-.ggg{
-    display: inline;
+.fte-container{
+    margin-left: 300px;
+    margin-top: 10px;
+    
+}
+.total-container{
+    margin-top: -350px;
+    width: 50%;
+    margin-left: 400px;
+}
+.onsite-container{
+    margin-left:-200px ;
 }

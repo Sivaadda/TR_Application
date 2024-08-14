@@ -13,7 +13,7 @@ export class UtilizationService {
   uploadFile(file: File): Observable<any> {
     const formData: FormData = new FormData();
 formData.append('file', file, file.name);
-return this.http.post(`${this.apiUrl}/upload`, formData);
+return this.http.post(`${this.apiUrl}/Upload`, formData);
   }
  
   getAssociateData(): Observable<any[]> {
